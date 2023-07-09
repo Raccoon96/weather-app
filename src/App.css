@@ -1,0 +1,211 @@
+input {
+  background-color: rgba(37, 52, 89, 0.6);
+  font-size: 1.2rem;
+  width: calc(100% - 20px);
+  height: 100%;
+  border-radius: 20px;
+  padding-left: 20px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  margin: 0;
+  border: none;
+  outline: none;
+  box-shadow: none;
+  color: white;
+}
+
+input:hover {
+  background-color: rgba(59, 76, 124, 0.6);
+}
+
+input::placeholder {
+  color: white;
+}
+
+.App {
+  background-image: linear-gradient(
+    180deg,
+    rgba(2, 2, 3, 1) 0%,
+    rgba(16, 20, 32, 1) 100%
+  );
+  display: grid;
+  grid-template-columns: 3.5fr 2.5fr 2fr;
+  grid-template-rows: 0.5fr 4.25fr 4.25fr;
+  gap: 40px;
+  padding: 40px;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+.SearchBar {
+  background-color: rgba(37, 52, 89, 0.6);
+  grid-column: 1 / span 2;
+  grid-row: 1;
+  border-radius: 20px;
+}
+
+.MainInfo {
+  grid-column: 1;
+  grid-row: 2;
+  border-radius: 20px;
+  padding-left: 20px;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+
+.Info {
+  grid-column: 1;
+  grid-row: 1 / span 2;
+}
+
+.Icon {
+  grid-column: 2;
+  grid-row: 1 / span 2;
+}
+
+.BigIcon {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.SmallIcon {
+  width: 50%;
+  height: 100%;
+  object-fit: contain;
+  justify-self: center;
+}
+
+.SecondaryInfo {
+  background-color: rgba(37, 52, 89, 0.6);
+  grid-column: 2;
+  grid-row: 2;
+  border-radius: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 2fr 2fr;
+  box-sizing: border-box;
+  justify-items: center;
+}
+
+.AirConditions {
+  grid-column: 1 / span 2;
+  grid-row: 1;
+}
+
+.RealFeel {
+  grid-column: 1;
+  grid-row: 2;
+}
+
+.Pressure {
+  grid-column: 2;
+  grid-row: 2;
+}
+
+.Humidity {
+  grid-column: 1;
+  grid-row: 3;
+}
+
+.WindSpeed {
+  grid-column: 2;
+  grid-row: 3;
+}
+
+.DayForecast {
+  background-color: rgba(37, 52, 89, 0.6);
+  grid-column: 1 / span 2;
+  grid-row: 3;
+  border-radius: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 5fr;
+  box-sizing: border-box;
+  justify-items: center;
+}
+
+.TodayForecast {
+  grid-column: 1 / span 5;
+  grid-row: 1;
+}
+
+.WeekForecast {
+  background-color: rgba(37, 52, 89, 0.6);
+  grid-column: 3;
+  grid-row: 1 / span 3;
+  border-radius: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 2fr 2fr 2fr 2fr 2fr;
+  box-sizing: border-box;
+  justify-items: center;
+  align-items: center;
+}
+
+.NextDaysForecast {
+  text-align: center;
+  grid-column: 1 / span 3;
+}
+
+@media (max-width: 1050px) {
+  .App {
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.5fr 4.25fr 4.25fr 4fr 9fr;
+    gap: 40px;
+    height: 250vh;
+    justify-items: center;
+  }
+
+  .SearchBar {
+    grid-column: 1;
+    grid-row: 1;
+    width: 100%;
+    height: 200%;
+  }
+
+  .MainInfo {
+    grid-column: 1;
+    grid-row: 2;
+    width: 75%;
+  }
+
+  .SecondaryInfo {
+    grid-column: 1;
+    grid-row: 3;
+    width: 75%;
+  }
+
+  .DayForecast {
+    grid-column: 1;
+    grid-row: 4;
+  }
+
+  .WeekForecast {
+    grid-column: 1;
+    grid-row: 5;
+    width: 75%;
+    justify-content: center;
+    align-items: center;
+  }
+
+  p {
+    font-size: 1rem;
+  }
+}
+
+.day {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+.week {
+  flex-direction: row;
+  display: flex;
+  justify-content: center;
+  gap: 70px;
+}
